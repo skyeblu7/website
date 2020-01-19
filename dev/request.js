@@ -4,6 +4,6 @@ var app = express();
 app.get('/',function(res,req) {
         req.sendFile("/home/ubuntu/website/dev/home.html");
 })
-var port = 443;
+var port = 9000;
 app.listen(port);
 console.log('Listening on port', port);
