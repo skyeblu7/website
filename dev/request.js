@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-app.get('/',function(res,req) {
+app.get('/dev',function(res,req) {
         req.sendFile("/home/ubuntu/test/website.html");
 })
 var port = 80;
