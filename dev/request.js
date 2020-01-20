@@ -1,4 +1,45 @@
 
+port = 443;
+var express = require('express');
+var app = express();
+
+app.set('view engine', 'ejs');
+
+
+app.get('/', function(req,res){
+	res.sendFile(__dirname + "/html/index.html");
+});
+
+app.get('/ACM-sigarch-logo.png', function(req,res){
+	res.sendFile('/home/ubuntu/website/dev/image/ACM-sigarch-logo.png');
+});
+
+app.get('/profile/:name', function(req,res){
+	var data = {age: 69, job: 'ninja', hobbies: ['eating', 'sleeping', 'ece']}
+	res.render('profile', {person: req.params.name, data: data});
+});
+
+
+app.listen(port);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 var http = require('http');
 var fs = require('fs'); 
 var port = 443;
@@ -31,7 +72,7 @@ server.listen(port);
 console.log('Listening on port', port);
 
 
-
+*/
 
 
 
