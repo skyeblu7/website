@@ -1,23 +1,51 @@
 
 port = 443;
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
 
 app.set('view engine', 'ejs');
+app.use('/assets', express.static('assets'));
 
+
+app.post('/loginout', urlencodedParser, function(req, res){
+	res.render('contact', {qs: req.query});
+});
 
 app.get('/', function(req,res){
-	res.sendFile(__dirname + "/html/index.html");
+	res.render('index');
 });
+
+
+app.get('/mainpage', function(req,res){
+	res.render('mainpage');
+});
+app.get('/beginnerpractice', function(req,res){
+	res.render('beginnerpractice');
+});
+app.get('/guidedprojects', function(req,res){
+	res.render('guidedprojects');
+});
+app.get('/scoreboard', function(req,res){
+	res.render('scoreboard');
+});
+app.get('/runasimulation', function(req,res){
+	res.render('runasimulation');
+});
+app.get('/loginout', function(req,res){
+	res.render('loginout');
+});
+app.get('/myprofile/:name', function(req,res){
+	var data = {age: 69, job: 'ninja', hobbies: ['eating', 'sleeping', 'ece']}
+	res.render('myprofile', {person: req.params.name, data: data});
+});
+
 
 app.get('/ACM-sigarch-logo.png', function(req,res){
-	res.sendFile('/home/ubuntu/website/dev/image/ACM-sigarch-logo.png');
+	res.sendFile('/home/ubuntu/website/dev/assets/ACM-sigarch-logo.png');
 });
 
-app.get('/profile/:name', function(req,res){
-	var data = {age: 69, job: 'ninja', hobbies: ['eating', 'sleeping', 'ece']}
-	res.render('profile', {person: req.params.name, data: data});
-});
+
 
 
 app.listen(port);
