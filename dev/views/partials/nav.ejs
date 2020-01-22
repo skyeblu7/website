@@ -1,11 +1,46 @@
+
 <nav>
-    <ul>
-        <a  href="/mainpage"> <img src="/ACM-sigarch-logo.png" /> </a>
-        <li><a href="/beginnerpractice">Beginner Practice</a></li>
-        <li><a href="/guidedprojects">Guided Projects</a></li>
-        <li><a href="/scoreboard">Scoreboard</li>
-        <li><a href="/runasimulation">Run a Simulation</a></li>
-        <li><a href="/loginout">Log in/out</a></li>
-        <li><a href="/myprofile">My Profile</a></li>
-    </ul>
+ <div class="navbar">
+
+    <head>
+        <link href="/assets/navstyles.css" rel="stylesheet" type='text/css' />
+    </head>
+
+
+    <li><a  href="/mainpage"> <img src="/ACM-sigarch-logo.png" width=130px /> </a></li>
+
+    <div class="dropdown">
+      <button class="dropbtn">Learning HDL
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="/beginnerpractice">Beginner Practice</a>
+        <a href="/guidedprojects">Guided Projects</a>
+        <a href="/scoreboard">Scoreboard</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Simulation
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="/runasimulation">Run a Simulation</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">My Profile
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="/loginout">Log in/out</a>
+          <a href="/myprofile">My Profile</a>
+        </div>
+      </div>
+  </div> 
 </nav>
+
+
+
+

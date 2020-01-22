@@ -15,7 +15,7 @@ app.post('/loginout', urlencodedParser, function(req, res){
 });
 
 app.get('/', function(req,res){
-	res.render('index');
+	res.render('mainpage');
 });
 
 
