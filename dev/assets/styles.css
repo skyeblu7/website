@@ -1,3 +1,27 @@
-body{background: white; font-family: verdana; color: #fff; }
-h1{font-size: 48px; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
-p{font-size: 16px;}
+
+
+body{
+    background: #9c9a9a; 
+    font-family: verdana; 
+    color: black; 
+}
+
+h1{
+    font-size: 36px; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    text-align: center;
+    padding-top: 32px;
+}
+
+p{
+    font-size: 16px;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    padding-top: 200px;
+}
+
+
