@@ -39,7 +39,7 @@ app.get('/loginout', function(req,res){
 });
 app.get('/myprofile/:name', function(req,res){
 	var personal = {age: 69, job: 'ninja', hobbies: ['eating', 'sleeping', 'ece']};
-	res.render('myprofile', {person: req.params.name, personal: data});
+	res.render('myprofile', {person: req.params.name, data: personal});
 });
 
 
